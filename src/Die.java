@@ -11,21 +11,6 @@ public class Die{
 
     }
 
-    public void rollDice1(){
-        int d1Roll = (int)(Math.random() * 6) + 1;
-        dice1 = d1Roll;
-    }
-
-    public void rollDice2(){
-        int d2Roll = (int)(Math.random() * 6) + 1;
-        dice2 = d2Roll;
-    }
-
-    public void rollDice3(){
-        int d3Roll = (int)(Math.random() * 6) + 1;
-        dice3 = d3Roll;
-    }
-
     public int getDice1(){
         return dice1;
     }
@@ -48,5 +33,21 @@ public class Die{
 
     public void setDice3(int newNum){
         dice3 = newNum;
+    }
+
+
+    public void rollDice1(){
+        int d1Roll = (int)(Math.random() * 6) + 1;
+        dice1 = d1Roll;
+    }
+
+    public void rollDice2(){
+        int d2Roll = (int)(Math.random() * 6) + 1;
+        dice2 = d2Roll;
+    }
+
+    public void rollDice3(){
+        int d3Roll = (int)(Math.random() * 6) + 1;
+        dice3 = d3Roll;
     }
 }

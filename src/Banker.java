@@ -14,6 +14,60 @@ public class Banker{
 
     }
 
+    public void changeChipAmt(int amt){
+        chips += amt;
+    }
+
+    public int getChips(){
+        return chips;
+    }
+
+    public boolean ifWon(){
+        return won;
+    }
+
+    public boolean ifNotWon(){
+        return notWon;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public int getD1(){
+        return d.getDice1();
+    }
+    public int getD2(){
+        return d.getDice2();
+    }
+    public int getD3(){
+        return d.getDice3();
+    }
+
+    public void setDice1(int val){
+        d.setDice1(val);
+    }
+    public void setDice2(int val){
+        d.setDice2(val);
+    }
+    public void setDice3(int val){
+        d.setDice3(val);
+    }
+
+    public void setWon(){
+        won = false;
+    }
+
+    public void setNotWon(){
+        notWon = false;
+    }
+
+    public void reset(){
+        chips = 1000;
+        won = false;
+        scored = false;
+    }
+
 
     public void bankRoll(){
         d.rollDice1();
@@ -63,64 +117,9 @@ public class Banker{
         return "";
     }
 
-    public void changeChipAmt(int amt){
-        chips += amt;
-    }
-    public int getChips(){
-        return chips;
-    }
-    public boolean ifWon(){
-        return won;
-    }
-
-    public boolean ifNotWon(){
-        return notWon;
-    }
-
-    public int getScore(){
-        return score;
-    }
-
-    public int getD1(){
-        return d.getDice1();
-    }
-    public int getD2(){
-        return d.getDice2();
-    }
-    public int getD3(){
-        return d.getDice3();
-    }
-
-    public void reset(){
-        chips = 1000;
-        won = false;
-        scored = false;
-    }
-
     public void bankRollTest(){
         d.rollDice1();
         d.rollDice2();
         d.rollDice3();
     }
-
-    public void setDice1(int val){
-        d.setDice1(val);
-    }
-    public void setDice2(int val){
-        d.setDice2(val);
-    }
-    public void setDice3(int val){
-        d.setDice3(val);
-    }
-
-    public void setWon(){
-        won = false;
-    }
-
-    public void setNotWon(){
-        notWon = false;
-    }
-
-
-
 }

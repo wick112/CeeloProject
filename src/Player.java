@@ -18,6 +18,73 @@ public class Player{
         wins = 0;
     }
 
+    public boolean ifScored(){
+        return scored;
+    }
+    public boolean inGame(){
+        if (chips <= 0){
+            inGame = false;
+        }
+        return inGame;
+    }
+
+    public boolean ifWon(){
+        return won;
+    }
+
+    public int getD1(){
+        return d.getDice1();
+    }
+    public int getD2(){
+        return d.getDice2();
+    }
+    public int getD3(){
+        return d.getDice3();
+    }
+
+    public int getChips(){
+        return chips;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public void setWagerAmt(int amt){
+        wagerAmt = amt;
+    }
+
+    public int getWagerAmt(){
+        return wagerAmt;
+    }
+
+    public void addChips(int amt){
+        chips += amt;
+    }
+
+    public void setInGame(boolean bool){
+        inGame = bool;
+    }
+
+    public void reset(){
+        chips = 100;
+        won = false;
+        inGame = true;
+        scored = false;
+    }
+
+    public void addWin(){
+        wins++;
+    }
+
+    public int getWins(){
+        return wins;
+    }
+
 
     public void playerRoll(){
         d.rollDice1();
@@ -68,79 +135,10 @@ public class Player{
         return "";
     }
 
-    public boolean ifScored(){
-        return scored;
-    }
-    public boolean inGame(){
-        if (chips <= 0){
-            inGame = false;
-        }
-        return inGame;
-    }
-
-    public boolean ifWon(){
-        return won;
-    }
-
-    public int getD1(){
-        return d.getDice1();
-    }
-    public int getD2(){
-        return d.getDice2();
-    }
-    public int getD3(){
-        return d.getDice3();
-    }
-
-    public int getChips(){
-        return chips;
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public int getScore(){
-        return score;
-    }
-
     public void playerRollTest(){
         d.rollDice1();
         d.rollDice2();
         d.rollDice3();
     }
-
-    public void setWagerAmt(int amt){
-        wagerAmt = amt;
-    }
-
-    public int getWagerAmt(){
-        return wagerAmt;
-    }
-
-    public void addChips(int amt){
-        chips += amt;
-    }
-
-    public void setInGame(boolean bool){
-        inGame = bool;
-    }
-
-    public void reset(){
-        chips = 100;
-        won = false;
-        inGame = true;
-        scored = false;
-    }
-
-    public void addWin(){
-        wins++;
-    }
-
-    public int getWins(){
-        return wins;
-    }
-
-
 
 }

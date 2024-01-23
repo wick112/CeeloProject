@@ -27,17 +27,6 @@ public class Ceelo{
         introduce();
         System.out.println();
         mainMenu();
-        // if ((player1.inGame() == false && player2.inGame() == false && player3.inGame() == false) || (bank.getChips() <= 0)){
-        //   gameOver = true;
-        // }
-        // while (!gameOver){
-        //   playRound();
-        //   if (gameOver){
-        //     checkWinner();
-        //     end();
-        //   }
-        // }
-
     }
 
     public void introduce(){
@@ -66,9 +55,7 @@ public class Ceelo{
         }
         isGameOver();
         round++;
-
     }
-
 
     public void wager(){
         if (player1.inGame() == true){
@@ -80,7 +67,6 @@ public class Ceelo{
                 player1.setWagerAmt(wager1);
             }
         }
-
         if (player2.inGame() == true){
             System.out.println(player2.getName() + ", how many chips do you want to wager (Between 0 and " + player2.getChips() + "): ");
             wager2 = scanner.nextInt();
@@ -102,7 +88,6 @@ public class Ceelo{
         }
         System.out.println();
     }
-
 
     public void bankersTurn(){
         try {
@@ -314,7 +299,9 @@ public class Ceelo{
     }
 
     public void checkTop(){
-        if(player1.getWins() >= player2.getWins() && player1.getWins() >= player3.getWins()){
+        if (player1.getWins() == 0 && player2.getWins() == 0 && player3.getWins() == 0){
+            System.out.println("Top Score: None");
+        }else if(player1.getWins() >= player2.getWins() && player1.getWins() >= player3.getWins()){
             System.out.println("Top Score: Player 1: " + player1.getName());
         }else if(player2.getWins() >= player1.getWins() && player2.getWins() >= player3.getWins()){
             System.out.println("Top Score: Player 2: " + player2.getName());
